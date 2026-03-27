@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aryan Chopra — Fullstack Developer</title>
+
+<!-- Primary Meta -->
+<meta name="title" content="Aryan Chopra — Fullstack Developer">
+<meta name="description" content="Fullstack dev, backend-first. 1 year in the industry. Building consumer apps, multi-agent systems, and shipping fast from Bangalore / Delhi.">
+<meta name="author" content="Aryan Chopra">
+<meta name="keywords" content="Aryan Chopra, fullstack developer, backend developer, Bangalore, Delhi, WLDD, Solo, Memed, multi-agent systems, Node.js, Next.js">
+<meta name="robots" content="index, follow">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aryanchopra.dev/">
+<meta property="og:title" content="Aryan Chopra — Fullstack Developer">
+<meta property="og:description" content="Fullstack dev, backend-first. Building consumer apps with 80k+ users, multi-agent systems, and shipping fast from Bangalore / Delhi.">
+<meta property="og:image" content="https://aryanchopra.dev/og-image.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://aryanchopra.dev/">
+<meta property="twitter:title" content="Aryan Chopra — Fullstack Developer">
+<meta property="twitter:description" content="Fullstack dev, backend-first. Building consumer apps with 80k+ users, multi-agent systems, and shipping fast from Bangalore / Delhi.">
+<meta property="twitter:image" content="https://aryanchopra.dev/og-image.png">
+<meta name="twitter:creator" content="@aryann_chopraa">
+<meta name="twitter:site" content="@aryann_chopraa">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://aryanchopra.dev/">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aryan Chopra",
+  "url": "https://aryanchopra.dev",
+  "sameAs": [
+    "https://github.com/AryanChopraa",
+    "https://www.linkedin.com/in/aryann-chopraa/",
+    "https://x.com/aryann_chopraa",
+    "https://www.instagram.com/thearyanchopra"
+  ],
+  "jobTitle": "Fullstack Developer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "WLDD"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bangalore",
+    "addressCountry": "IN"
+  }
+}
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #ffffff;
+    --surface: #f5f5f5;
+    --border: #d0d0d0;
+    --accent: #000000;
+    --accent2: #000000;
+    --text: #111111;
+    --muted: #888888;
+    --mono: 'DM Mono', monospace;
+    --display: 'Bebas Neue', sans-serif;
+    --body: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--body);
+    font-weight: 300;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* noise grain overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.4;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 80px 0 48px;
+    border-bottom: 1px solid var(--border);
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .hero-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .hero-label span {
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-bottom: 2px;
+  }
+
+  .hero-name {
+    font-family: var(--display);
+    font-size: clamp(72px, 14vw, 120px);
+    line-height: 0.9;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    margin-bottom: 28px;
+  }
+
+  .hero-name em {
+    color: var(--accent);
+    font-style: normal;
+  }
+
+  .hero-tagline {
+    font-size: 15px;
+    color: #666666;
+    max-width: 520px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .hero-tagline strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* EXPLORING BADGE */
+  .exploring {
+    margin-top: 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #f0f0f0;
+    border: 1px solid #cccccc;
+    padding: 8px 16px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: #111111;
+    letter-spacing: 0.05em;
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: blink 1.5s ease infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--border);
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .section:nth-child(2) { animation-delay: 0.1s; }
+  .section:nth-child(3) { animation-delay: 0.2s; }
+  .section:nth-child(4) { animation-delay: 0.3s; }
+  .section:nth-child(5) { animation-delay: 0.4s; }
+
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .section-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+  }
+
+  .section-title {
+    font-family: var(--display);
+    font-size: 28px;
+    letter-spacing: 0.06em;
+    color: var(--text);
+  }
+
+  /* WORK CARDS */
+  .work-card {
+    margin-bottom: 32px;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    position: relative;
+    transition: border-color 0.2s ease;
+  }
+
+  .work-card:hover {
+    border-color: #111111;
+  }
+
+  .work-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 2px;
+    background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+  }
+
+  .work-card:hover::before { transform: scaleY(1); }
+
+  .work-role {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .work-company {
+    font-family: var(--display);
+    font-size: 24px;
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+    color: var(--text);
+  }
+
+  .work-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .work-bullets li {
+    font-size: 13.5px;
+    color: #555555;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .work-bullets li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .work-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+
+  .link-chip {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+  }
+
+  .link-chip:hover {
+    color: #111111;
+    border-color: #111111;
+  }
+
+  /* PROJECTS GRID */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+
+  @media (max-width: 600px) {
+    .projects-grid { grid-template-columns: 1fr; }
+  }
+
+  .project-card {
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-card::after {
+    content: '↗';
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 14px;
+    color: var(--muted);
+    transition: all 0.2s ease;
+  }
+
+  .project-card:hover {
+    border-color: #111111;
+    background: #eeeeee;
+  }
+
+  .project-card:hover::after {
+    color: #111111;
+    transform: translate(2px, -2px);
+  }
+
+  .project-name {
+    font-family: var(--display);
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .project-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .project-tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: #555555;
+    border: 1px solid #bbbbbb;
+    padding: 2px 8px;
+    margin-top: 12px;
+    letter-spacing: 0.1em;
+  }
+
+  /* LINKS SECTION */
+  .links-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 10px 18px;
+    letter-spacing: 0.08em;
+    transition: all 0.2s ease;
+  }
+
+  .social-link:hover {
+    color: var(--text);
+    border-color: var(--text);
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-text {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+  }
+
+  .footer-accent {
+    color: #111111;
+    font-weight: 500;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-label"><span></span>Builder · Bangalore / Delhi</div>
+    <h1 class="hero-name">ARYAN<br><em>CHOPRA</em></h1>
+    <p class="hero-tagline">
+      Fullstack dev, <strong>backend-first</strong>. 1 year in the industry. Stack doesn't matter anymore — if you can problem-solve and you've got a Cursor/Claude Pro sub, you can build anything.
+    </p>
+    <div class="exploring">
+      <div class="dot"></div>
+      Currently exploring world simulation through multi-agent systems
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">WORK EX</h2>
+    </div>
+
+    <div class="work-card">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:6px;">
+        <div class="work-role" style="margin-bottom:0">Backend Developer</div>
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;border:1px solid #111;padding:3px 10px;color:#111;display:flex;align-items:center;gap:7px;"><span style="width:6px;height:6px;background:#111;border-radius:50%;display:inline-block;animation:blink 1.5s ease infinite;"></span>CURRENTLY HERE</div>
+      </div>
+      <div class="work-company">WLDD</div>
+      <ul class="work-bullets">
+        <li>Built backend for Solo &amp; Memed — consumer apps with <strong style="color:#111111">80k+ users</strong>, brands incl. Amazon Prime, Hotstar, Netflix, Philips</li>
+        <li>Shipped robust payments, YouTube &amp; Instagram OAuth login</li>
+        <li>Built Instagram data scraper</li>
+      </ul>
+      <div class="work-links">
+        <a class="link-chip" href="https://solocreators.app/" target="_blank" rel="noopener noreferrer">solocreators.app</a>
+        <a class="link-chip" href="https://apps.apple.com/us/app/memed-clipping-app/id6755515062" target="_blank" rel="noopener noreferrer">memed ↗</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-role">Fullstack Developer</div>
+      <div class="work-company">IMAGINED STUDIO</div>
+      <ul class="work-bullets">
+        <li>Forward-deployed for Zerodha — built YouTube analytics dashboard unifying all channels under Zero1</li>
+        <li>Video retrieval library with global search, video segmentation, RAG pipelines (ChromaDB + Gemini)</li>
+      </ul>
+      <div class="work-links">
+        <a class="link-chip" href="https://www.imagined.studio/" target="_blank" rel="noopener noreferrer">imagined.studio</a>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-role">Fullstack Developer</div>
+      <div class="work-company">DUNLIN.AI</div>
+      <ul class="work-bullets">
+        <li>Custom transaction classification: heuristic matching + LLM layer (ChromaDB) — 400+ categorizations in &lt;5s, fine-tuned on 5 years of ledger data</li>
+        <li>REST APIs for QuickBooks &amp; Zoho Books; Docker + Azure + GitHub Actions CI/CD</li>
+        <li>Next.js financial dashboard handling 1000+ transactions; Chrome extension that bypassed API limits and cut onboarding friction by 50%</li>
+      </ul>
+      <div class="work-links">
+        <a class="link-chip" href="https://dunlin.ai/" target="_blank" rel="noopener noreferrer">dunlin.ai ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="section-title">PROJECTS</h2>
+    </div>
+    <div class="projects-grid">
+      <a class="project-card" href="https://github.com/AryanChopraa/crack-coder" target="_blank" rel="noopener noreferrer">
+        <div class="project-name">CRACK CODER</div>
+        <div class="project-desc">Open-source Interview Coder / Cluely alternative</div>
+        <div class="project-tag">OPEN SOURCE</div>
+      </a>
+      <a class="project-card" href="https://github.com/AryanChopraa/autosurf-server-node" target="_blank" rel="noopener noreferrer">
+        <div class="project-name">AUTOSURF</div>
+        <div class="project-desc">Autonomous browser agent — shipped before ChatGPT/Perplexity did it</div>
+        <div class="project-tag">EARLY MOVER</div>
+      </a>
+      <a class="project-card" href="https://www.mypeach.club/home" target="_blank" rel="noopener noreferrer">
+        <div class="project-name">MYPEACH</div>
+        <div class="project-desc">Sexual wellness community in India — ~1k users pre-launch</div>
+        <div class="project-tag">LIVE</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- LINKS -->
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="section-title">FIND ME</h2>
+    </div>
+    <div class="links-row">
+      <a class="social-link" href="https://github.com/AryanChopraa" target="_blank" rel="noopener noreferrer">GITHUB</a>
+      <a class="social-link" href="https://www.linkedin.com/in/aryann-chopraa/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+      <a class="social-link" href="https://x.com/aryann_chopraa" target="_blank" rel="noopener noreferrer">TWITTER / X</a>
+      <a class="social-link" href="https://www.instagram.com/thearyanchopra" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span class="footer-text">ARYAN CHOPRA · BLR / DEL</span>
+    <span class="footer-text">BUILDING IN <span class="footer-accent">PUBLIC</span></span>
+  </footer>
+
+</div>
+
+</body>
+</html>
